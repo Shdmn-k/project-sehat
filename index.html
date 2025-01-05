@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SEHAT by shadmeen</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Linking to external CSS file -->
+  
+</head>
+<body>
+  <header>
+    <!-- Left side (Logo and Links) -->
+    <div class="logo">
+        <img src="PICS/logo.png" alt="Logo" class="logo-img">
+        <span class="logo-text">SEHAT</span>
+    </div>
+    <div class="nav-links">
+        <a href="#">Medicine</a>
+        <a href="#">Lab-Test</a>
+        <a href="#">Consult Doctor</a>
+        <a href="#">Cancer Care</a>
+    </div>
+    
+    <!-- Right side (Login/Signup, Cart Icon, Help Section) -->
+    <div class="right-section">
+        <div class="login-signup" id="login-signup-btn">Login | Signup</div>
+       <!-- Cart Icon with count -->
+        <!--  -->
+    <!-- <div class="cart-icon" id="cart-link">
+      &#128722;
+      <span id="cart-count">0</span>
+  </div> -->
+        <!-- <div class="cart-icon">&#128722;</div> -->
+        <a href="cart.html" id="cart-link" class="cart-icon">&#128722 (<span id="cart-count">0</span>)</a>
+
+
+    </div>
+</header>
+ <!-- Login/Signup Modal (Added Below Header) -->
+ <div id="login-signup-modal" class="modal">
+  <div class="modal-content">
+    <span id="close-modal-btn" class="close">&times;</span>
+    <!-- Modal Content -->
+    <h2 style="color: rgb(17, 16, 16); text-align: center;">Login</h2>
+
+    <!-- Login Form -->
+    <form id="login-form">
+      <input type="email" placeholder="Enter your email" required>
+      <input type="password" placeholder="Enter your password" required>
+      <button type="submit">Login</button>
+      
+    </form>
+    <p style="color: gray; text-align: center;">New here?</p>
+    <h2 style="color: rgb(17, 16, 16); text-align: center;">Signup</h2>
+    <!-- Signup Form -->
+    <form id="signup-form">
+      <input type="text" placeholder="Enter your name" required>
+      <input type="email" placeholder="Enter your email" required>
+      <input type="password" placeholder="Enter your password" required>
+      <button type="submit">Signup</button>
+      <div class="checkbox-section">
+        <input type="checkbox" id="medical-professional-checkbox">
+        <label for="medical-professional-checkbox" style="color: gray; text-align: center;">Are you registering as a medical professional?</label>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <!-- safe Header
+  <header> -->
+    <!-- Left side (Logo and Links) -->
+    <!-- <div class="logo">
+      <img src="PICS/logo.png" alt="Logo" class="logo-img">
+      <span class="logo-text">SEHAT</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Medicine</a>
+      <a href="#">Lab-Test</a>
+      <a href="#">Consult Doctor</a>
+      <a href="#">Cancer Care</a>
+    </div> -->
+    
+    <!-- Right side (Login/Signup, Cart Icon, Help Section) -->
+    <!-- <div class="right-section">
+      <div class="login-signup">Login / Signup</div>
+      <div class="cart-icon">&#128722;</div>
+      <div class="need-help">Need Help?</div>
+    </div>
+  </header> -->
+
+
+
+<!-- pop up signin ligin modal changes from heree -->
+ <!-- Modal for Login/Signup -->
+ <!-- <div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close-btn">&times;</span> -->
+    
+    <!-- Login Form -->
+    <!-- <div id="loginForm">
+      <h2>Login</h2>
+      <form action="#" method="POST">
+        <input type="text" placeholder="Username" required><br>
+        <input type="password" placeholder="Password" required><br>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="#" id="showSignup">Sign up</a></p>
+    </div> -->
+
+    <!-- Signup Form -->
+    <!-- <div id="signupForm" style="display: none;">
+      <h2>Signup</h2>
+      <form action="#" method="POST">
+        <input type="text" placeholder="Username" required><br>
+        <input type="email" placeholder="Email" required><br>
+        <input type="password" placeholder="Password" required><br>
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+    </div>
+  </div>
+</div> -->
+
+ <!-- changes above for adding pop up modal -->
+
+
+
+  <!-- Location and Search Ribbon -->
+  <div class="location-search-ribbon">
+    <!-- Location Section -->
+    <div class="location">
+      <span class="location-icon">&#x1F4CD;</span>
+      <div class="location-dropdown">
+        <button class="location-btn">Select Location</button>
+        <div class="dropdown-content">
+          <a href="#">Mumbai</a>
+          <a href="#">Delhi</a>
+          <a href="#">Bengaluru</a>
+          <a href="#">Kolkata</a>
+          <a href="#">Chennai</a>
+          <a href="#">Hyderabad</a>
+          <a href="#">Pune</a>
+        </div>
+      </div>
+    </div>
+    <!-- Search Bar Section -->
+    <div class="search-bar">
+      <input type="text" placeholder="Search For Medicines and Health Products">
+    </div>
+    <!-- Quick Buy Button -->
+    <div class="quick-buy">
+      <button class="quick-buy-btn">Quick Buy</button>
+    </div>
+  </div>
+
+  <!-- New Ribbon with Dropdowns for Categories -->
+  <div class="category-ribbon">
+    <!-- Health Resource Center -->
+    <div class="category-dropdown">
+      <button class="category-btn">Health Resource Center</button>
+      <div class="category-dropdown-content">
+        <a href="#">First Aid Kits</a>
+        <a href="#">Medical Equipment</a>
+        <a href="#">Health Articles</a>
+        <a href="#">Health Tips</a>
+      </div>
+    </div>
+
+    <!-- Winter Care Essentials -->
+    <div class="category-dropdown">
+      <button class="category-btn">Winter Care Essentials</button>
+      <div class="category-dropdown-content">
+        <a href="#">Thermals</a>
+        <a href="#">Winter Jackets</a>
+        <a href="#">Moisturizers</a>
+        <a href="#">Lip Care</a>
+        <a href="#">Hand Warmers</a>
+      </div>
+    </div>
+
+    <!-- Vitamins and Nutrition -->
+    <div class="category-dropdown">
+      <button class="category-btn">Vitamins and Nutrition</button>
+      <div class="category-dropdown-content">
+        <a href="#">Multivitamins</a>
+        <a href="#">Protein Supplements</a>
+        <a href="#">Omega-3 Fatty Acids</a>
+        <a href="#">Vitamin C</a>
+        <a href="#">Iron Supplements</a>
+      </div>
+    </div>
+
+    <!-- Nutritional Drinks -->
+    <div class="category-dropdown">
+      <button class="category-btn">Nutritional Drinks</button>
+      <div class="category-dropdown-content">
+        <a href="#">Protein Shakes</a>
+        <a href="#">Meal Replacement Drinks</a>
+        <a href="#">Health Drinks</a>
+        <a href="#">Smoothie Powders</a>
+      </div>
+    </div>
+
+  
+    
+
+    <!-- Personal Care -->
+    <div class="category-dropdown">
+      <button class="category-btn">Personal Care</button>
+      <div class="category-dropdown-content">
+        <a href="#">Skincare Products</a>
+        <a href="#">Haircare Products</a>
+        <a href="#">Oral Care</a>
+        <a href="#">Grooming Kits</a>
+        <a href="#">Deodorants</a>
+      </div>
+    </div>
+
+    <!-- Pain Relief -->
+    <div class="category-dropdown">
+      <button class="category-btn">Pain Relief</button>
+      <div class="category-dropdown-content">
+        <a href="#">Pain Relief Creams</a>
+        <a href="#">Muscle Relaxants</a>
+        <a href="#">Cold Packs</a>
+        <a href="#">Heating Pads</a>
+        <a href="#">Painkillers</a>
+      </div>
+    </div>
+
+    <!-- Fitness Supplements -->
+    <div class="category-dropdown">
+      <button class="category-btn">Fitness</button>
+      <div class="category-dropdown-content">
+        <a href="#">Pre-Workout Supplements</a>
+        <a href="#">Post-Workout Recovery</a>
+        <a href="#">Amino Acids</a>
+        <a href="#">Creatine</a>
+        <a href="#">BCAAs</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Advertisement Section -->
+<div class="advertisement-section">
+    <div class="ad-left">
+      <img src="PICS/BANNER1.png" alt="Offer Advertisement" class="ad-img">
+    </div>
+    <div class="video-container">
+        <video class="video" controls>
+          <source src="PICS/advid.mp4" type="video/mp4">
+          
+        </video>
+      </div>
+    <div class="ad-right">
+        <img src="PICS/BANNER2.png" alt="New Arrivals" class="ad-img">
+      </div>
+  </div>
+  <!-- Shop by Concern Section -->
+<div class="shop-by-concern">
+  <h2>Shop By Concern</h2>
+  
+  <!-- Background Ribbon -->
+  <div class="ribbon-background"></div>
+  
+  <div class="concern-container">
+    <div class="concern-card">
+      <img src="PICS/pain.png" alt="Pain Relief">
+      <h3>Pain Relief</h3>
+    </div>
+    <div class="concern-card">
+      <img src="PICS/skincare.png" alt="Skin Care">
+      <h3>Skin Care</h3>
+    </div>
+    <div class="concern-card">
+      <img src="PICS/fitness.png" alt="Fitness Supplements">
+      <h3>Fitness Supplements</h3>
+    </div>
+    <div class="concern-card">
+      <img src="PICS/digest.png" alt="Digestive Health">
+      <h3>Digestive Health</h3>
+    </div>
+    <div class="concern-card">
+      <img src="PICS/hair.png" alt="Hair Care">
+      <h3>Hair Care</h3>
+    </div>
+  </div>
+</div>
+
+
+<!-- Trending Now Section -->
+<div class="trending-now">
+  <h2>Trending Now</h2>
+  
+  <!-- First Row of Products -->
+  <div class="product-row">
+    <div class="product-card">
+      <img src="PICS/ticture.png" alt="Product 1">
+      <h3>Tincture of Iodine</h3>
+      <p>A versatile antiseptic for first-aid and disinfecting.</p>
+      <span class="price">₹499</span>
+      <span class="discount">10% Off</span>
+      <p class="delivery">Delivery by: 15th Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="PICS/ointment.png" alt="Product 2">
+      <h3>Ointment </h3>
+      <p>A soothing topical solution for skin relief and healing.</p>
+      <span class="price">₹799</span>
+      <span class="discount">15% Off</span>
+      <p class="delivery">Delivery by: 18th Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="PICS/protienpower.png" alt="Product 3">
+      <h3>Protein Powder</h3>
+      <p>Protein supplement for energy and muscle recovery.</p>
+      <span class="price">₹399</span>
+      <p class="delivery">Delivery by: 16th Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="PICS/serum.png" alt="Product 4">
+      <h3>Sunscreen</h3>
+      <p>Broad-spectrum protection to shield your skin from harmful UV rays</p>
+      <span class="price">₹1499</span>
+      <span class="discount">20% Off</span>
+      <p class="delivery">Delivery by: 20th Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="PICS/vitamins.png" alt="Product 5">
+      <h3>Essential Meds</h3>
+      <p>Reliable medical essentials for everyday health and well being needs </p>
+      <span class="price">₹699</span>
+      <p class="delivery">Delivery by: 17th Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="PICS/moisturizer.png" alt="Product 6">
+      <h3>Moisturizer</h3>
+      <p>Hydrating formula for soft and nourished, fights winter dryness </p>
+      <span class="price">₹899</span>
+      <p class="delivery">Delivery by: 19th Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Second Row of Products -->
+  <div class="product-row">
+    <div class="product-card">
+      <img src="PICS/vitamins2.png" alt="Product 7">
+      <h3>Vitamins</h3>
+      <p> Essential supplements to boost overall health and immunity.</p>
+      <span class="price">₹1199</span>
+      <span class="discount">5% Off</span>
+      <p class="delivery">Delivery by: 22nd Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="PICS/themometer.png" alt="Product 8">
+      <h3>Thermometer</h3>
+      <p>Accurate and reliable device for monitoring body temperature.</p>
+      <span class="price">₹499</span>
+      <p class="delivery">Delivery by: 23rd Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="PICS/masks.png" alt="Product 9">
+      <h3>Masks</h3>
+      <p>Comfortable and protective face coverings for safety.Pack of 50</p>
+      <span class="price">₹899</span>
+      <span class="discount">10% Off</span>
+      <p class="delivery">Delivery by: 24th Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="pics/handwash.png" alt="Product 10">
+      <h3>Handwash</h3>
+      <p>Description for Product 10 goes here. Perfect for your needs!</p>
+      <span class="price">₹1299</span>
+      <p class="delivery">Delivery by: 26th Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="PICS/sunscreen.png" alt="Product 11">
+      <h3>Serum</h3>
+      <p>Concentrated all in one treatment to get flawless skin, fighs acne</p>
+      <span class="price">₹799</span>
+      <p class="delivery">Delivery by: 28th Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <div class="product-card">
+      <img src="PICS/pet meds.png" alt="Product 12">
+      <h3>Pet Meds Fish Bites</h3>
+      <p> Tasty, nutrient-packed bites designed to support your cats health</p>
+      <span class="price">₹649</span>
+      <p class="delivery">Delivery by: 29th Jan, 2025</p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- About Us Section -->
+<div class="about-us">
+  <h2>About Sehat</h2>
+  
+  <!-- Description -->
+  <p>At Sehat, we are dedicated to providing the best healthcare solutions with a vast selection of medicines, health products, and services. Our goal is to deliver high-quality products at affordable prices, ensuring that your health needs are met with convenience and ease.</p>
+  
+  <!-- Key Stats -->
+  <div class="key-stats">
+    <div class="stat-item">
+      <h3>5000+</h3>
+      <p>Products Available</p>
+    </div>
+    <div class="stat-item">
+      <h3>1 Million+</h3>
+      <p>Orders Delivered</p>
+    </div>
+    <div class="stat-item">
+      <h3>24/7</h3>
+      <p>Customer Support</p>
+    </div>
+    <div class="stat-item">
+      <h3>50+</h3>
+      <p>Partnered Hospitals</p>
+    </div>
+  </div>
+  
+  <!-- Services Offered -->
+  <h3>Services We Offer</h3>
+  <ul class="services-list">
+    <li><i class="fa fa-medkit"></i> Medicine Delivery</li>
+    <li><i class="fa fa-ambulance"></i> Lab Tests & Consultations</li>
+    <li><i class="fa fa-heartbeat"></i> Health Check-ups</li>
+    <li><i class="fa fa-truck"></i> Fast Delivery Services</li>
+    <li><i class="fa fa-user-md"></i> 24/7 Expert Consultations</li>
+  </ul>
+</div>
+
+
+<script src="index.js"></script>
+<script src="cart.js"></script>
+
+</body>
+</html>
